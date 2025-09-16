@@ -63,6 +63,62 @@ pip install -r requirements.txt
 
 ---
 
+## Running Inference
+
+This project provides an inference script to test the trained model on random images from the inference dataset.
+
+### Prerequisites
+- Make sure you have installed all dependencies:
+  ```
+  pip install -r requirements.txt
+  ```
+- Ensure that:
+  - Your trained model file is available in ../models/
+  - Sample images are placed in ../data/inference data/
+
+- Step-by-Step Execution
+1. Activate Environment (if using virtualenv/conda)
+  ```
+  source venv/bin/activate   # Linux/Mac
+  .\venv\Scripts\activate    # Windows
+  ```
+2. Run the Inference Script
+  ```
+  python scripts/inference.py
+  ```
+  - The script will automatically:
+    - Pick 10 random images from ../data/inference data/
+    - Load the trained model
+    - Generate predictions
+    - Compare predictions with ground-truth labels
+3. View Results
+  - Predictions (with ground-truth) will be saved as images in:
+    ```
+    ../results/
+    ```
+  - Example output file:
+    ```
+    ../results/inference_results.png
+    ```
+
+---
+
+## Sample Output
+
+Below is an example output grid showing 10 random inference images with predicted and ground-truth labels:
+
+Notes
+- Input images must follow the naming convention:
+cat.23.png, dog.82.png, etc.
+- By default, results are saved to ../results/.
+Update the script if you want to change the save path.
+- The script runs on GPU if available; otherwise, it defaults to CPU.
+
+![Inference results](results/inference_results.png)
+
+
+---
+
 ##  Usage
 
 Run the Streamlit app:
