@@ -4,6 +4,18 @@ Cat vs Dog Image Classification using PyTorch & ResNet-18. Includes training not
 
 ---
 
+## Dataset
+
+This project uses the **Cats vs Dogs dataset** originally provided by Microsoft and hosted on [Kaggle](https://www.kaggle.com/competitions/dogs-vs-cats/data).
+
+### Access Instructions
+1. Create a free Kaggle account if you don’t have one.
+2. Go to the dataset page: https://www.kaggle.com/competitions/dogs-vs-cats/data
+3. Accept the competition rules to unlock the dataset.
+4. Download the ZIP file (`train.zip` and `test1.zip`).
+5. Extract the contents and organize them as follows:
+---
+
 ## Features
 - **End-to-end pipeline**: From dataset preparation to deployment via a web app.
 - **Cat vs Dog classification** using **ResNet-18** in PyTorch.
